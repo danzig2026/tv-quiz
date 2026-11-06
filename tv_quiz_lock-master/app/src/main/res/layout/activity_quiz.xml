@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:gap="32dp"
+    android:background="#000000">
+    <TextView android:id="@+id/tv_q"
+        android:textColor="#ffffff"
+        android:textSize="32sp"/>
+    <Button android:id="@+id/opt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button android:id="@+id/opt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/et_pwd"
+        android:hint="家长密码"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_unlock"
+        android:text="密码解锁"/>
+</LinearLayout>
