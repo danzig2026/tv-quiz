@@ -17,15 +17,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        working-directory: tv_quiz_lock-master
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
 
       - name: Build APK
-        working-directory: tv_quiz_lock-master
-        run: ./gradlew assembleDebug
+        working-directory: ./tv_quiz_lock-master
+        run: gradle assembleDebug --stacktrace
 
-      - name: Upload APK artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: tv-apk
